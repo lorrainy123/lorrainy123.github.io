@@ -7,7 +7,7 @@
   <script>
   function compute_c_trans(x) {
    var y = 0;
-   x = parseInt(x);
+   x = parseFloat(x);
    y = x * 1.8 + 32;
    return y;
   }
@@ -23,7 +23,7 @@
 
   function compute_f_trans(x) {
    var y = 0;
-   x = parseInt(x);
+   x = parseFloat(x);
    y = (x - 32)/ 1.8;
    return y;
   }
