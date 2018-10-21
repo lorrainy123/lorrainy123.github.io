@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Conversion</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css">
+  <script>
+  function compute_c_trans(x) {
+   var y = 0;
+   x = parseFloat(x);
+   y = x * 1.8 + 32;
+   return y;
+  }
+
+  function c_to_f() {
+    var x = document.getElementById("myForm1").elements[0].value;
+    var y =compute_c_trans(x);
+    var x = document.getElementById("answer1");
+    x.style.fontSize = "20px";
+    x.style.color = "orange";
+    document.getElementById("answer1").innerHTML = "The temperature is " + y + "°F" ;
+  }
+
+  function compute_f_trans(x) {
+   var y = 0;
+   x = parseFloat(x);
+   y = (x - 32)/ 1.8;
+   return y;
+  }
+
+  function f_to_c() {
+    var x = document.getElementById("myForm2").elements[0].value;
+    var y =compute_f_trans(x);
+    var x = document.getElementById("answer2");
+    x.style.fontSize = "20px";
+    x.style.color = "orange";
+    document.getElementById("answer2").innerHTML = "The temperature is " + y + "°C" ;
+  }
+ </script>
+
+ <style>
+   input[type=text] {
+     width: 10%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: 1px solid #555;
+     outline: none;
+ }
+   input[type=text]:focus {
+     background-color: gold;
+ }
+ </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <br>
+
+    <form id="myForm1">
+      <div class="form-group">
+      <label for="1st"><b>Enter a °C:</b></label>
+      <input type="text" class="form-control">
+      </div>
+      <button type="button" class="btn btn-outline-warning" onclick="c_to_f();">Convert</button>
+      <p id="answer1">Press the Convert, and the °F  will appear.
+    </form>
+
+      <form id="myForm2">
+        <div class="form-group">
+        <label for="1st"><b>Enter a °F:</b></label>
+        <input type="text" class="form-control">
+        </div>
+        <button type="button" class="btn btn-outline-warning" onclick="f_to_c();">Convert</button>
+        <p id="answer2">Press the Button, and the °C  will appear.
+      </form>
+
+    </div>
+</body>
+</html>
