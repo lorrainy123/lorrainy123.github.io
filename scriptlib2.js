@@ -48,9 +48,9 @@ $(document).ready(function(){
                 $.each(result.records, function(key,value) {
                     table2_items = [];
                         table2_items.push(value.fields.Name);
-                        table2_items.push(value.fields.Box_Office_MUSD);
-                        table2_items.push(value.fields.Budget_MUSD);
                         table2_items.push(value.fields.Profit);
+                        table2_items.push(value.fields.Budget_MUSD);
+                        table2_items.push(value.fields.Box_Office_MUSD);
                         table2_dataSet.push(table2_items);
                         console.log(table2_items);
                  }); // end .each
@@ -62,11 +62,11 @@ $(document).ready(function(){
                     columns: [
                         { title: "Name",
                           defaultContent:""},
-                        { title: "Box_Office_MUSD",
+                        { title: "Profit",
                           defaultContent:""},
                         { title: "Budget_MUSD",
                           defaultContent:""},
-                        { title: "Profit",
+                        { title: "Box_Office_MUSD",
                           defaultContent:""},
                     ] // rmf columns
                 } ); // end dataTable
