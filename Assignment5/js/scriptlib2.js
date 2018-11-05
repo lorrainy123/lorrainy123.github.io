@@ -70,6 +70,10 @@ $(document).ready(function(){
                          columns: table2_dataSet,
                          type : 'bar'
                      },
+                     axis: {
+                       x: {label: 'Name'},
+                       y: {label: 'Profit'}
+                     },
                      donut: {
                          title: "Tasks for Each Stage:",
                      }
