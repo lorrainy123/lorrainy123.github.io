@@ -60,7 +60,6 @@ $(document).ready(function(){
                     columns: [
                         { title: "Name",
                           defaultContent:""},
-                          defaultContent:""},
                         { title: "Profit",
                           defaultContent:""},
                     ] // rmf columns
