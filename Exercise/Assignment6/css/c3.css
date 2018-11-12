@@ -32,22 +32,26 @@
 }
 
 .c3-axis-y .tick {
+  color: white
 }
 .c3-axis-y-label {
+  color: white
 }
 
 .c3-axis-y2 .tick {
+  color: white
 }
 .c3-axis-y2-label {
+  color: white
 }
 
 /*-- Grid --*/
 
 .c3-grid line {
-  stroke: #aaa;
+  stroke: white;
 }
 .c3-grid text {
-  fill: #aaa;
+  fill: white;
 }
 .c3-xgrid, .c3-ygrid {
   stroke-dasharray: 3 3;
@@ -58,12 +62,14 @@
 /*-- Text on Chart --*/
 
 .c3-text {
+  color: white
 }
 
 /*-- Line --*/
 
 .c3-line {
   stroke-width: 1px;
+  color: white
 }
 /*-- Point --*/
 
@@ -80,12 +86,14 @@
 
 .c3-bar._expanded_ {
   fill-opacity: 0.75;
+  color: white
 }
 
 /*-- Arc --*/
 
 .c3-chart-arcs-title {
   font-size: 1.3em;
+  color: white
 }
 
 /*-- Focus --*/
@@ -97,7 +105,7 @@
 /*-- Region --*/
 
 .c3-region {
-  fill: steelblue;
+  fill: white;
   fill-opacity: .1;
 }
 
@@ -123,7 +131,7 @@
 .c3-tooltip {
   border-collapse:collapse;
   border-spacing:0;
-  background-color:#fff;
+  background-color:white;
   empty-cells:show;
   -webkit-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
      -moz-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
@@ -131,14 +139,14 @@
   opacity: 0.9;
 }
 .c3-tooltip tr {
-  border:1px solid #CCC;
+  border:1px solid white;
 }
 .c3-tooltip th {
-  background-color: #aaa;
+  background-color: white;
   font-size:14px;
   padding:2px 5px;
   text-align:left;
-  color:#FFF;
+  color: white;
 }
 .c3-tooltip td {
   font-size:13px;
