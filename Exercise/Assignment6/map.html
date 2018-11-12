@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Map</title>
+    <link rel="icon" type="image/png" href="map/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="map/css/combined.css">
+
+    <!-- END: Styles -->
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="shortcut icon" href="">
+    <script src="js/leaflet.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+    <header class="nk-header nk-header-opaque">
+        <!--
+        START: Navbar
+    -->
+        <nav class="nk-navbar nk-navbar-top">
+            <div class="container">
+                <div class="nk-nav-table">
+                    <a href="index.html" class="nk-nav-logo">
+                        <img src="map/images/map.jpg" alt="" width="85" class="nk-nav-logo-onscroll">
+                        <img src="map/images/map.jpg" alt="" width="85">
+                    </a>
+
+                    <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
+                        <li>
+                            <a href="index.html">homepage</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nk-nav nk-nav-right nk-nav-icons">
+                        <li class="single-icon hidden-lg-up">
+                            <a href="#" class="nk-navbar-full-toggle">
+                                <span class="nk-icon-burger">
+                                    <span class="nk-t-1"></span>
+                                    <span class="nk-t-2"></span>
+                                    <span class="nk-t-3"></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END: Navbar -->
+
+    </header>
+
+
+
+
+    <!--
+    START: Navbar Mobile
+-->
+    <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
+        <div class="nk-navbar-bg">
+            <div class="bg-image" style="background-image: url('map/images/bg-menu.jpg')"></div>
+        </div>
+        <div class="nk-nav-table">
+            <div class="nk-nav-row">
+                <div class="container">
+                    <div class="nk-nav-header">
+
+                        <div class="nk-nav-logo">
+                            <a href="index.html" class="nk-nav-logo">
+                                <img src="map/images/logo-light.svg" alt="" width="85">
+                            </a>
+                        </div>
+
+                        <div class="nk-nav-close nk-navbar-full-toggle">
+                            <span class="nk-icon-close"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-nav-row-full nk-nav-row">
+                <div class="nano">
+                    <div class="nano-content">
+                        <div class="nk-nav-table">
+                            <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
+                                <ul class="nk-nav">
+                                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-nav-row">
+                <div class="container">
+                    <div class="nk-nav-social">
+                        <ul>
+                            <li><a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Navbar Mobile -->
+
+
+    <div class="nk-main">
+
+
+
+
+
+        <div class="container">
+            <div class="nk-portfolio-single">
+
+                <div class="nk-gap-4 mb-14"></div>
+                <h1 class="nk-portfolio-title display-4">Map</h1>
+                <div class="row vertical-gap">
+                    <div class="col-lg-8">
+                        <div class="nk-portfolio-info">
+                            <div class="nk-portfolio-text">
+                                <p>The map selects some of the movie shooting places, so that you can
+                                learn more about the setting or even the cultural background. Enjoy!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <table class="nk-portfolio-details">
+                        </table>
+                    </div>
+                </div>
+                <div class="nk-gap-4 mt-14"></div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+          <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- START: Scripts -->
+
+        <script src="map/js/combined.js"></script>
+
+        <script>
+        var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+
+        var map = L.map('map')
+              .addLayer(mapboxTiles)
+              .setView([51, 0], 2);
+
+        var items = [];
+        var airtable_read_endpoint = "https://api.airtable.com/v0/app9cDRUSwu89KSQR/Table%201?api_key=keyoBP8I4GOGpxbjZ";
+        var data = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+               $.each(result.records, function(key,value) {
+                   items = {};
+                       items["name"] = value.fields.Name;
+                       items["url"] = value.fields.url;
+                       items["image_url"] = value.fields.image_url;
+                       items["latitud"] = value.fields.Lat;
+                       items["longitud"] = value.fields.Lng;
+                       data.push(items);
+                       console.log(items);
+                }); // end .each
+        }); // end getJSON
+    </script>
+    <script>
+    function show_districts(){
+
+      for (var i in data) {
+        var Icon = L.icon({
+    iconUrl: 'marker.png',
+
+    iconSize:     [40, 40], // size of the icon
+    iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+          var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+          L.marker( latlng, {icon: Icon} )
+              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>'  )
+              .addTo(map);
+      }
+    }
+    </script>
+
+    <style>
+    #map {
+        width: 960px;
+        height:500px;
+    }
+
+    /* css to customize Leaflet default styles  */
+    .custom .leaflet-popup-tip,
+    .custom .leaflet-popup-content-wrapper {
+        background: #e93434;
+        color: #ffffff;
+    }
+    </style>
+
+    <!-- END: Scripts -->
+
+    <!-- Extra -->
+
+
+</body>
+
+</html>
