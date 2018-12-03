@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Horror Lab</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- CSS needed for the quiz-->
+    <link href="css/juma-quiz.css" rel="stylesheet">
+    <!-- Styles for the example -->
+    <link href="css/example.css" rel="stylesheet">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="homepage.png" type="image/x-icon">
+    <link rel="icon" href="homepage.png" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a href="gallery.html" title="gallery.html">Gallery</a></li>
+                    <li><a href="statistics.html" title="services">Statistics</a></li>
+                    <li><a href="highenergy.html" title="works">High Energy</a></li>
+                </ul>
+
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100013315203551"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to The Horror Lab</h3>
+
+                <h1>
+                    这里是恐怖实验室<br>
+                    We are a group of passionate <br>
+                    horror movie lovers who are <br>
+                    seeking for the best <br>
+                    works of our time.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#services" class="smoothscroll btn btn--stroke">
+                        先来做个测试吧
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        关于我们
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li>
+        </ul>
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">来做个小测试</h3>
+                <h1 class="display-2">你是什么等级的恐怖片爱好者</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+
+        	<div class="juma-quiz">
+        		<ol id="js--my-quiz">
+        			<li>
+        				<h3 id="acc--question-one">你从小到大看过多少恐怖片呢？</h3>
+        				<ul>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="1">基本没有看过（但可能是有一点点想看的？）</li>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="2">10部以下</li>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="3">10部以上</li>
+        				</ul>
+        			</li>
+
+        			<li>
+        				<h3 id="acc--question-two">你看恐怖片的频率？</h3>
+        				<ul>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="1">千年看一回</li>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="2">偶尔小看怡情</li>
+        					<li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="3">定期吸食恐怖片</li>
+        				</ul>
+        			</li>
+
+        			<li>
+        				<h3 id="acc--question-three">看恐怖片感觉到要高能了你会？</h3>
+        				<ul>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="1">捂眼睛</li>
+        					<li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="2">捂耳朵</li>
+        					<li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="3">真的勇士敢于正视淋漓的鲜血</li>
+        				</ul>
+        			</li>
+
+              <li>
+                <h3 id="acc--question-four">如果看完了一部超超超恐怖的片子你会?</h3>
+                <ul>
+                  <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="1">这个礼拜别想睡觉了</li>
+                  <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="2">看完当晚还是会怕怕的</li>
+                  <li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="3">心满意足地沉沉睡去</li>
+                </ul>
+              </li>
+
+        		</ol>
+        		<ul class="juma-score">
+        			<li data-points="6">
+        				<h3>鬼片小萌新</h3>
+        				<p>在你前几十年的人生中可能充满了动作冒险，青春恋爱，战争历史，迪士尼和超级英雄(●ﾟωﾟ●)。</br>
+                  你很少或者几乎不看恐怖片，有可能是因为害怕被吓哭然后被一起看的朋友叫成怂蛋。</br>
+                  偶尔看一次恐怖片的后遗症在你身上最为明显，你会检查厕所里有没有人，浴室里有没有人，床底下有没有人，天花板上有没有人。</br>
+                  少年不要害怕嘛，要相信唯物主义和科学发展观啊！</br>
+                   </br>
+                </p>
+               <h3>推荐影片：《忌日快乐》</h3></br>
+               <center><img src="images/rec/1.jpeg"></center>
+               <p>泰莉被困在了她的生日9月18日星期一，</br>
+                 每天她都会被神秘蒙面男杀害，然后又重新醒过来。</br>
+                 这部片子没有鬼怪，也没有超自然，甚至还有些喜剧成分，非常适合萌新们入手。</br>
+               </p>
+               <a href="gallery.html">
+                   去往展厅/Gallery
+               </a>
+        			</li>
+
+        			<li data-points="9">
+                <h3>鬼片知识分子</h3>
+        				<p>你已经不是那个一看恐怖片就会死死勒住朋友手臂的年轻人了(๑´ㅂ`๑)。</br>
+                  走出电影院去厕所也不再哆哆嗦嗦得需要人陪，</br>
+                  你学会了自己判断片子的好坏，也可以给一起看的萌新们提供臂膀，</br>
+                  但是在看超级恐怖的片子时，还是会忍不住惊！呼！起！来！</br>
+                   </br>
+                </p>
+               <h3>推荐影片：《遗传厄运》</h3></br>
+               <center><img src="images/rec/3.jpeg"></center>
+               <p>自从母亲死后，安妮一家就接二连三发生诡异事件，</br>
+                 神秘的图腾，陌生的姓名以及神出鬼没的不速之客让这个家庭被笼罩在压抑的气氛之中。</br>
+                 隐藏在这所有事件之后的母亲的秘密到底是什么呢。</br>
+               </p>
+        			</li>
+
+
+        			<li data-points="12">
+                <h3>行走的放映机本人</h3>
+        				<p>到这个等级的你已经有一种任尔东西南北各方妖魔，我自岿然不动的淡定。(*￣(エ)￣)</br>
+                  对恐怖片的各类经典你已经可以如数家珍，并且也已经有了自己偏爱的种类。</br>
+                  你已经很少被新的恐怖片所打动了，觉得很多片子都是新瓶装旧酒。</br>
+                  少年不要忘记当初第一次看片子的心动啊！</br>
+                   </br>
+                </p>
+               <h3>推荐影片：《小丑回魂》</h3></br>
+               <center><img src="images/rec/2.jpeg"></center>
+               <p>距离1990年版的《小丑回魂》已经27年了</br>
+                 这部新片讲了27年后小丑再次出现在了德里市，带着那个每隔27年就会出现很多非正常死亡人口的传说</br>
+                 来挖掘每个少年内心的恐惧和秘密</br>
+               </p>
+        			</li>
+
+        		</ul>
+        	</div>
+
+
+    </section> <!-- end s-services -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">你好呀</h3>
+                <h1 class="display-1 display-1--light">我们是恐怖实验室</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+              <p>
+               这是一个适合入门小白和骨灰粉的恐怖片分享网站</br>
+               这个网站包含了小测试、分类展厅、数据和地图、最新影讯和高能预警板块</br>
+               它的片库和模块功能将会不断扩大，敬请期待哦。
+             </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">4230</div>
+                <h5>制作分钟</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">24</div>
+                <h5>目前收录作品</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">150</div>
+                <h5>预计收录作品</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">500</div>
+                <h5>预计一周点击量</h5>
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">来看看</h3>
+                    <h1 class="display-2 display-2--light">最新影片资讯</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="images/portfolio/lady-shutterbug.jpg"
+                                         srcset="images/portfolio/lady-shutterbug.jpg 1x, images/portfolio/lady-shutterbug@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    寄宿学校</br>
+                                    Boarding School
+                                </h3>
+                                <p class="item-folio__cat">
+                                    2018-08-31
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>一个年轻的男孩对他已故祖母的事物着迷，被送到一个孤立的寄宿学校，该学校由一位神秘的校长和他的妻子管理。</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                    <img src="images/portfolio/woodcraft.jpg"
+                                         srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    月光光心慌慌</br>
+                                    Halloween
+                                </h3>
+                                <p class="item-folio__cat">
+                                    2018-10-19
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>著名杀人狂迈克尔·麦尔斯又回来了！</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                    <img src="images/portfolio/the-beetle.jpg"
+                                         srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    使徒</br>
+                                    Apostle
+                                </h3>
+                                <p class="item-folio__cat">
+                                    2018-10-12
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>故事讲述一个男人因妹妹被邪教份子绑架，决定独闯龙潭、实施复仇计划的故事。</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">如果你想要</h3>
+                <h1 class="display-2 display-2--light">联系我们</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+
+            <div class="contact-primary">
+
+                <h3 class="h6">给我们写邮件</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">联系信息</h3>
+
+                    <div class="cinfo">
+                        <h5>地址</h5>
+                        <p>
+                            CUHK,<br>
+                            SHATIN<br>
+                            HONG KONG
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>邮箱</h5>
+                        <p>
+                            lorrainechaoran@163.com<br>
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>电话</h5>
+                        <p>
+                            Mobile: (+852) 5334 8243<br>
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Horror Lab 2018</span>
+                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!-- load jquery (necessary)-->
+    <script src="js/jquery.min.js"></script>
+    <!-- load the plugin -->
+    <script src="js/jquery.juma-quiz-min.js"></script>
+    <!-- init the plugin and define your options -->
+    <script>
+    $(function(){
+      $('body').jumaQuiz({
+        container: 'js--my-quiz',
+        progress: false
+      });
+    });
+    </script>
+
+</body>
+
+</html>
