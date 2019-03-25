@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Google Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="static/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="static/css/misc.css">
+	<link rel="stylesheet" href="static/css/red-scheme.css">
+  <link rel="stylesheet" href="static/css/combined.css">
+	<link rel="stylesheet" href="static/css/leaflet.css">
+  <script src="static/js/jquery-1.10.2.min.js"></script>
+	<script src="static/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="static/js/leaflet.js"></script>
+	<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+
+
+
+
+	<link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+
+</head>
+
+
+<body>
+
+  <div class="responsive_menu">
+        <ul class="main_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Portfolio</a>
+            	<ul>
+            		<li><a href="portfolio.html">Portfolio Grid</a></li>
+            		<li><a href="project-image.html">Project Image</a></li>
+            		<li><a href="project-slideshow.html">Project Slideshow</a></li>
+            	</ul>
+            </li>
+            <li><a href="#">Blog</a>
+				<ul>
+					<li><a href="blog.html">Blog Standard</a></li>
+					<li><a href="blog-single.html">Blog Single</a></li>
+                    <li><a href="#">visit templatemo</a></li>
+				</ul>
+            </li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul> <!-- /.main_menu -->
+    </div> <!-- /.responsive_menu -->
+
+    <header class="site-header clearfix">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <div class="pull-left logo">
+              <a href="index.html">
+                <img src="static/images/logo.png" alt="Medigo by templatemo">
+              </a>
+            </div>	<!-- /.logo -->
+
+            <div class="main-navigation pull-right">
+
+              <nav class="main-nav visible-md visible-lg">
+                <ul class="sf-menu">
+                  <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">Portfolio</a>
+                          <ul>
+                            <li><a href="portfolio.html">Portfolio Grid</a></li>
+                            <li><a href="project-image.html">Project Image</a></li>
+                            <li><a href="project-slideshow.html">Project Slideshow</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Blog</a>
+                    <ul>
+                      <li><a href="blog.html">Blog Standard</a></li>
+                      <li><a href="blog-single.html">Blog Single</a></li>
+                                          <li><a href="#">visit templatemo</a></li>
+                    </ul>
+                        </li>
+                        <li><a href="/logout">Logout</a></li>
+                        <li><a href="/login">Login</a></li>
+                </ul> <!-- /.sf-menu -->
+              </nav> <!-- /.main-nav -->
+
+              <!-- This one in here is responsive menu for tablet and mobiles -->
+  					    <div class="responsive-navigation visible-sm visible-xs">
+  					        <a href="#nogo" class="menu-toggle-btn">
+  					            <i class="fa fa-bars"></i>
+  					        </a>
+  					    </div> <!-- /responsive_navigation -->
+
+  					</div> <!-- /.main-navigation -->
+
+  				</div> <!-- /.col-md-12 -->
+
+  			</div> <!-- /.row -->
+
+  		</div> <!-- /.container -->
+  	</header> <!-- /.site-header -->
+
+<div class="jumbotron text-center">
+  <h1>
+ </br>
+  </h1>
+  <p></p>
+  {% if current_user.is_authenticated %}
+    <p>You're already login.</p>
+  {% else %}
+      <p>{{message}}</p>
+  {% endif %}
+</div>
+
+<div class="container">
+ {% if not current_user.is_authenticated %}
+ <center><form class="form-signin" style="width:30%;" method="post" action="/process">
+     <h2 class="form-signin-heading">Please sign in</h2>
+     <label for="inputEmail" class="sr-only">User name</label>
+     <input type="text" name="username" id="username" class="form-control" placeholder="User name" required autofocus>
+     <label for="inputPassword" class="sr-only">Password</label>
+     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+     <div class="checkbox">
+       <label>
+         <input type="checkbox" value="remember-me"> Remember me
+       </label>
+     </div>
+     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form></center>
+ {% endif %}
+</div>
+
+<script src="static/js/min/plugins.min.js"></script>
+<script src="static/js/min/medigo-custom.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
